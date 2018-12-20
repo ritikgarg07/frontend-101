@@ -136,8 +136,7 @@ h1 {
     box-sizing: border-box;
     vertical-align: middle;
     padding: .5%;
-    margin: 5px;
-    min-width: 200px;
+    min-width: 150px;
 }
 
 div.member-image-container {
