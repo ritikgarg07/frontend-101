@@ -121,16 +121,15 @@ h1 {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     align-content: flex-start;
     position: static;
 }
 
 .members-flex {
-    flex-grow: 1;
     background-color: transparent;
-    flex-basis: 25%;
+    flex-basis: 22%;
     height: fit-content;
     color: #fff;
     text-align: center;
