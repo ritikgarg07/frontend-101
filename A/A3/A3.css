@@ -161,6 +161,8 @@ div.member-text-container {
     width: 80%;
     height: 65%;
     margin: auto;
+    margin-bottom: 8px;
+    margin-top: 2px;
     overflow: hidden;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
