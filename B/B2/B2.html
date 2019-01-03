@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ACM BITS Pilani </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="B2.css" />
+    <script>
+        function myFunction() {
+          var x = document.getElementsByClassName("list");
+          for(ii = 0; ii < x.length; ii++) {
+            x[ii].classList.toggle("change");
+          }
+        }
+
+        function addMember() {
+            var container = document.getElementsByClassName("flex-container");
+            //adding the new member
+            container[0].innerHTML += '<div class = "members-flex"> <div class = "member-image-container"> <img src = "member.png" alt="member photo" class = "member-photo"> </div> <div class = "member-text-container"> <strong class="member-name"> </strong> <p class = "member-post"> </p> <hr> <p class = "member-info"> </p> </div> </div>'
+            
+            var members =  document.getElementsByClassName("members-flex");
+            var empty_flex = members[members.length - 1];
+
+            // var image_member = empty_flex.getElementsByTagName("img"); 
+            var name_member = empty_flex.getElementsByTagName("strong");
+            var post_member = empty_flex.getElementsByClassName("member-post");
+            var info_member = empty_flex.getElementsByClassName("member-info");
+
+            // var image_entered = document.getElementById("image-entered")
+            var name_entered = document.getElementById("name-entered");
+            var post_entered = document.getElementById("post-entered");
+            var info_entered = document.getElementById("info-entered");
+            
+            // image_member[0].src = image_entered.value;
+            name_member[0].innerHTML = name_entered.value;
+            post_member[0].innerHTML = post_entered.value;
+            info_member[0].innerHTML = info_entered.value;
+        }
+
+        function openForm() {
+            document.getElementById("add-member").style.display="";
+            document.getElementById("open-form").style.display="none";
+        }
+
+        function closeForm() {
+            document.getElementById("add-member").style.display="none";
+            document.getElementById("open-form").style.display="";
+        }
+    </script>
+</head>
+<body style = "background-color: whitesmoke;">
+    <nav> 
+        <ul>
+            <li id="organisation">BITS ACM</li>
+            <li id="menu" onclick="myFunction()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li class = "list" onclick="myFunction()"><a href=#home>Home</a></li>
+            <li class = "list" onclick="myFunction()"><a href=#members>Members</a></li>
+            <li class = "list" onclick="myFunction()"><a href=#news>News</a></li>
+            <li class = "list" onclick="myFunction()"><a href=#about>About Us</a></li>
+            <li class = "list" onclick="myFunction()"><a href=#contact>Contact</a></li>
+            
+        </ul>   
+    </nav>
+    <section id="home">
+        <h1></h1> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <section id="members">
+        <h1> Members </h1>
+            <div class = "flex-container">
+                <div class= "members-flex">
+                    <div class = "member-image-container">
+                        <img src="member.png" alt="member photo" class = "member-photo">
+                    </div>
+                    <div class = "member-text-container">
+                        <strong class="member-name">Name of Member</strong>
+                        <p class="member-post">Designation</p>
+                        <hr>
+                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class= "members-flex">
+                    <div class = "member-image-container">
+                        <img src="member.png" alt="member photo" class = "member-photo">
+                    </div>
+                    <div class = "member-text-container">
+                        <strong class="member-name">Name of Member</strong>
+                        <p class="member-post">Designation</p>
+                        <hr>
+                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class= "members-flex">
+                    <div class = "member-image-container">
+                        <img src="member.png" alt="member photo" class = "member-photo">
+                    </div>
+                    <div class = "member-text-container">
+                        <strong class="member-name">Name of Member</strong>
+                        <p class="member-post">Designation</p>
+                        <hr>
+                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class= "members-flex">
+                    <div class = "member-image-container">
+                        <img src="member.png" alt="member photo" class = "member-photo">
+                    </div>
+                    <div class = "member-text-container">
+                        <strong class="member-name">Name of Member</strong>
+                        <p class="member-post">Designation</p>
+                        <hr>
+                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class= "members-flex">
+                    <div class = "member-image-container">
+                        <img src="member.png" alt="member photo" class = "member-photo">
+                    </div>
+                    <div class = "member-text-container">
+                        <strong class="member-name">Name of Member</strong>
+                        <p class="member-post">Designation</p>
+                        <hr>
+                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class= "members-flex">
+                    <div class = "member-image-container">
+                        <img src="member.png" alt="member photo" class = "member-photo">
+                    </div>
+                    <div class = "member-text-container">
+                        <strong class="member-name">Name of Member</strong>
+                        <p class="member-post">Designation</p>
+                        <hr>
+                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+        <button id ="open-form" onclick="openForm()"> + </button>
+        <div id = "form">
+        <form id = "add-member" style = "display: none">
+            <span id = "Name-form"> Name of Member: </span>
+            <input type = "text" id = "name-entered" value = "Name of Member" ><br>
+
+            <span id = "post-form"> Designation: </span> 
+            <input type="text" id ="post-entered" value = "Designation"><br>
+            
+            <span id = "Info-form"> Description: </span> 
+            <input type="text" id = "info-entered" value = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."><br>
+            
+            <input type="button" value = "Add member" onclick = "addMember();">
+            <input type="button" value = "Cancel" onclick="closeForm();">
+        </form>
+        </div>
+    </section>
+    <section id="news">
+        <h1> News </h1> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <section id="about" >    
+        <h1> About Us</h1>  <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <section id="contact">
+        <h1> Contact</h1> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    
+            
+</body>
+</html>
