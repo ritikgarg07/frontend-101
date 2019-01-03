@@ -34,18 +34,38 @@
             
             // image_member[0].src = image_entered.value;
             name_member[0].innerHTML = name_entered.value;
+            if(name_entered.value === "")
+            {
+                name_member[0].innerHTML = name_entered.placeholder;
+            }
             post_member[0].innerHTML = post_entered.value;
+            if(post_entered.value === "")
+            {
+                post_member[0].innerHTML = post_entered.placeholder;
+            }
             info_member[0].innerHTML = info_entered.value;
+            if(info_entered.value === "")
+            {
+                info_member[0].innerHTML = info_entered.placeholder;
+            }
         }
 
         function openForm() {
             document.getElementById("add-member").style.display="";
             document.getElementById("open-form").style.display="none";
+            var name_entered = document.getElementById("name-entered");
+            var post_entered = document.getElementById("post-entered");
+            var info_entered = document.getElementById("info-entered");
+            
+            name_entered.value = "";
+            post_entered.value = "";
+            info_entered.value = "";
         }
 
         function closeForm() {
             document.getElementById("add-member").style.display="none";
             document.getElementById("open-form").style.display="";
+            
         }
     </script>
 </head>
@@ -142,16 +162,23 @@
 
         <button id ="open-form" onclick="openForm()"> + </button>
         <form id = "add-member" style = "display: none">
-            <span id = "Name-form"> Name of Member: </span>
-            <input type = "text" id = "name-entered" value = "Name of Member" ><br>
+            <h1> Add Members </h1>
+            <label id = "Name-form"> Name: </label> <br>
+            <input type = "text" id = "name-entered" placeholder = "Name of Member" > 
+            <hr>
+            <br>
 
-            <span id = "post-form"> Designation: </span> 
-            <input type="text" id ="post-entered" value = "Designation"><br>
+            <label id = "post-form"> Designation: </label> <br>
+            <input type="text" id ="post-entered" placeholder = "Designation">
+            <hr>
+            <br>
             
-            <span id = "Info-form"> Description: </span> 
-            <input type="text" id = "info-entered" value = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."><br>
+            <label id = "Info-form"> Description: </label> <br>
+            <input type="text" id = "info-entered" placeholder = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+            <hr>
+            <br>
             
-            <input type="button" value = "Add member" onclick = "addMember();">
+            <input type="button" value = "Add member" onclick = "addMember();openForm();">
             <input type="button" value = "Cancel" onclick="closeForm();">
         </form>
         <br><br>

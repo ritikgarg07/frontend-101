@@ -207,7 +207,6 @@ div.member-text-container hr {
     color: #011627;
     font-size: 3em;
     padding: 0px;
-    text-align: center;
     border: none;
     cursor: pointer;
     height: 1.1em;
@@ -225,17 +224,46 @@ div.member-text-container hr {
 
 #add-member {
     padding: 10px;
-    background-color: whitesmoke;
-    width: 90%;
+    max-width: 500px;
+    width: fit-content;
     margin: auto;
-    margin-top: 20px;
-    border: 3px solid #059FC9;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    border: 5px solid #f1f1f1;
+  
+}
+
+#add-member h1 {
+  color: #000;
+  padding: 10px;
+}
+
+#add-member label {
+  font-weight: bold;
+}
+
+#add-member input[type = text] {
+  width: 100%;
+  margin: 5px 0 0 0;
+  border: none;
+  background-color: transparent;
+}
+
+#add-member input::placeholder {
+  font-style: italic;
+}
+
+#add-member input:focus {
+  background-color: #ddd;
+}
+
+#add-member hr {
+  margin: 2px 0 0 0;
 }
 
 @media only screen and (min-width: 600px)
 {
   #add-member {
-    width: fit-content;
-    margin-left: 10px;
+    margin-left: 25px;
   }
 }
