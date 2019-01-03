@@ -7,5 +7,5 @@
   
 
 - Category B:
-  - B1
+  - B1: Clock.
   - [B2](https://ritikgarg07.github.io/frontend-101/B/B2/B2.html): Add members.
