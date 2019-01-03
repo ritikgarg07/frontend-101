@@ -257,8 +257,24 @@ div.member-text-container hr {
   background-color: #ddd;
 }
 
+
 #add-member hr {
   margin: 2px 0 0 0;
+}
+
+#add-member input[type = button] {
+  width: 48%;
+  padding: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#add {
+  background-color: green;
+}
+
+#close {
+  background-color: red;
 }
 
 @media only screen and (min-width: 600px)
@@ -266,4 +282,13 @@ div.member-text-container hr {
   #add-member {
     margin-left: 25px;
   }
+
+  #add-member input {
+    opacity: 0.8;
+  }
+  
+  #add-member input:hover {
+    opacity: 1;
+  }
+
 }
