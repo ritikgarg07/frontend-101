@@ -226,10 +226,16 @@ div.member-text-container hr {
 #add-member {
     padding: 10px;
     background-color: whitesmoke;
-    width: fit-content;
-    position: relative;
-    bottom: 8%;
-    left: 1%;
-    margin: 5px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
     border: 3px solid #059FC9;
+}
+
+@media only screen and (min-width: 600px)
+{
+  #add-member {
+    width: fit-content;
+    margin-left: 10px;
+  }
 }
