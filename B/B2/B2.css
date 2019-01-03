@@ -53,7 +53,7 @@ nav {
   position: sticky;
   top: 0px;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 1000;
 }
 
 #organisation {
@@ -201,7 +201,7 @@ div.member-text-container hr {
   color: white;
 }
 
-#open-form {
+#open-form , #remove-form {
     border-radius: 50%;
     background-color: white;
     color: #011627;
@@ -215,12 +215,15 @@ div.member-text-container hr {
     position: relative;
     bottom: 4%;
     left: 1%;
+    /* todo: make minus sign vertically center */
+    /* ask: if i put .blah display none, js fails  */
 }
 
-#open-form:hover {
+#open-form:hover ,  #remove-form:hover {
     color: #fff;
     background-color: #059FC9;
 }
+
 
 #add-member {
     padding: 10px;
@@ -262,7 +265,7 @@ div.member-text-container hr {
   margin: 2px 0 0 0;
 }
 
-#add-member input[type = button] {
+#add-member input[type = button]{
   width: 48%;
   padding: 6px;
   border: none;
@@ -272,10 +275,41 @@ div.member-text-container hr {
 #add {
   background-color: green;
 }
+#remove-done {
+  display: block;
+  font-size: 1.4em;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 10%;
+  margin: auto;
+  margin-top: 40px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
 
 #close {
   background-color: red;
 }
+
+.minus-signs {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  height: 1.1em;
+  width: 1.1em;
+  background-color: red; 
+  color: white;
+  border: none;
+  line-height: .2em;
+  font-size: 2em;
+  position: relative;
+  top: 20px;
+  right: 40%;
+  z-index: 5;
+}
+
 
 @media only screen and (min-width: 600px)
 {
@@ -283,12 +317,13 @@ div.member-text-container hr {
     margin-left: 25px;
   }
 
-  #add-member input {
+  #add-member input, #remove-done, .minus-signs {
     opacity: 0.8;
   }
   
-  #add-member input:hover {
+  #add-member input:hover, #remove-done:hover, .minus-signs:hover {
     opacity: 1;
   }
 
 }
+

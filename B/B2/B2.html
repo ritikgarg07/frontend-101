@@ -6,68 +6,7 @@
     <title>ACM BITS Pilani </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="B2.css" />
-    <script>
-        function myFunction() {
-          var x = document.getElementsByClassName("list");
-          for(ii = 0; ii < x.length; ii++) {
-            x[ii].classList.toggle("change");
-          }
-        }
-
-        function addMember() {
-            var container = document.getElementsByClassName("flex-container");
-            //adding the new member
-            container[0].innerHTML += '<div class = "members-flex"> <div class = "member-image-container"> <img src = "member.png" alt="member photo" class = "member-photo"> </div> <div class = "member-text-container"> <strong class="member-name"> </strong> <p class = "member-post"> </p> <hr> <p class = "member-info"> </p> </div> </div>'
-            
-            var members =  document.getElementsByClassName("members-flex");
-            var empty_flex = members[members.length - 1];
-
-            // var image_member = empty_flex.getElementsByTagName("img"); 
-            var name_member = empty_flex.getElementsByTagName("strong");
-            var post_member = empty_flex.getElementsByClassName("member-post");
-            var info_member = empty_flex.getElementsByClassName("member-info");
-
-            // var image_entered = document.getElementById("image-entered")
-            var name_entered = document.getElementById("name-entered");
-            var post_entered = document.getElementById("post-entered");
-            var info_entered = document.getElementById("info-entered");
-            
-            // image_member[0].src = image_entered.value;
-            name_member[0].innerHTML = name_entered.value;
-            if(name_entered.value === "")
-            {
-                name_member[0].innerHTML = name_entered.placeholder;
-            }
-            post_member[0].innerHTML = post_entered.value;
-            if(post_entered.value === "")
-            {
-                post_member[0].innerHTML = post_entered.placeholder;
-            }
-            info_member[0].innerHTML = info_entered.value;
-            if(info_entered.value === "")
-            {
-                info_member[0].innerHTML = info_entered.placeholder;
-            }
-        }
-
-        function openForm() {
-            document.getElementById("add-member").style.display="";
-            document.getElementById("open-form").style.display="none";
-            var name_entered = document.getElementById("name-entered");
-            var post_entered = document.getElementById("post-entered");
-            var info_entered = document.getElementById("info-entered");
-            
-            name_entered.value = "";
-            post_entered.value = "";
-            info_entered.value = "";
-        }
-
-        function closeForm() {
-            document.getElementById("add-member").style.display="none";
-            document.getElementById("open-form").style.display="";
-            
-        }
-    </script>
+    
 </head>
 <body style = "background-color: whitesmoke;">
     <nav> 
@@ -92,7 +31,8 @@
     <section id="members">
         <h1> Members </h1>
             <div class = "flex-container">
-                <div class= "members-flex">
+                <div class= "members-flex" id="member1">
+                    <button class = "minus-signs" id = "minus1" onclick="removeMember(1)" style="display:none"> - </button>
                     <div class = "member-image-container">
                         <img src="member.png" alt="member photo" class = "member-photo">
                     </div>
@@ -103,64 +43,76 @@
                         <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class= "members-flex">
-                    <div class = "member-image-container">
-                        <img src="member.png" alt="member photo" class = "member-photo">
-                    </div>
-                    <div class = "member-text-container">
-                        <strong class="member-name">Name of Member</strong>
-                        <p class="member-post">Designation</p>
-                        <hr>
-                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                
+                <div class= "members-flex" id="member2">
+                        <button class = "minus-signs" id = "minus2" onclick="removeMember(2)" style="display:none"> - </button>
+                        <div class = "member-image-container">
+                            <img src="member.png" alt="member photo" class = "member-photo">
+                        </div>
+                        <div class = "member-text-container">
+                            <strong class="member-name">Name of Member</strong>
+                            <p class="member-post">Designation</p>
+                            <hr>
+                            <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
                 </div>
-                <div class= "members-flex">
-                    <div class = "member-image-container">
-                        <img src="member.png" alt="member photo" class = "member-photo">
-                    </div>
-                    <div class = "member-text-container">
-                        <strong class="member-name">Name of Member</strong>
-                        <p class="member-post">Designation</p>
-                        <hr>
-                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                
+                <div class= "members-flex" id="member3">
+                        <button class = "minus-signs" id = "minus3" onclick="removeMember(3)" style="display:none"> - </button>
+                        <div class = "member-image-container">
+                            <img src="member.png" alt="member photo" class = "member-photo">
+                        </div>
+                        <div class = "member-text-container">
+                            <strong class="member-name">Name of Member</strong>
+                            <p class="member-post">Designation</p>
+                            <hr>
+                            <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
                 </div>
-                <div class= "members-flex">
-                    <div class = "member-image-container">
-                        <img src="member.png" alt="member photo" class = "member-photo">
-                    </div>
-                    <div class = "member-text-container">
-                        <strong class="member-name">Name of Member</strong>
-                        <p class="member-post">Designation</p>
-                        <hr>
-                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                
+                <div class= "members-flex" id="member4">
+                        <button class = "minus-signs" id = "minus4" onclick="removeMember(4)" style="display:none"> - </button>
+                        <div class = "member-image-container">
+                            <img src="member.png" alt="member photo" class = "member-photo">
+                        </div>
+                        <div class = "member-text-container">
+                            <strong class="member-name">Name of Member</strong>
+                            <p class="member-post">Designation</p>
+                            <hr>
+                            <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
                 </div>
-                <div class= "members-flex">
-                    <div class = "member-image-container">
-                        <img src="member.png" alt="member photo" class = "member-photo">
-                    </div>
-                    <div class = "member-text-container">
-                        <strong class="member-name">Name of Member</strong>
-                        <p class="member-post">Designation</p>
-                        <hr>
-                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                
+                <div class= "members-flex" id="member5">
+                        <button class = "minus-signs" id = "minus5" onclick="removeMember(5)" style="display:none"> - </button>
+                        <div class = "member-image-container">
+                            <img src="member.png" alt="member photo" class = "member-photo">
+                        </div>
+                        <div class = "member-text-container">
+                            <strong class="member-name">Name of Member</strong>
+                            <p class="member-post">Designation</p>
+                            <hr>
+                            <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
                 </div>
-                <div class= "members-flex">
-                    <div class = "member-image-container">
-                        <img src="member.png" alt="member photo" class = "member-photo">
-                    </div>
-                    <div class = "member-text-container">
-                        <strong class="member-name">Name of Member</strong>
-                        <p class="member-post">Designation</p>
-                        <hr>
-                        <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                
+                <div class= "members-flex" id="member6">
+                        <button class = "minus-signs" id = "minus6" onclick="removeMember(6)" style="display:none"> - </button>
+                        <div class = "member-image-container">
+                            <img src="member.png" alt="member photo" class = "member-photo">
+                        </div>
+                        <div class = "member-text-container">
+                            <strong class="member-name">Name of Member</strong>
+                            <p class="member-post">Designation</p>
+                            <hr>
+                            <p class="member-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
                 </div>
             </div>
 
         <button id ="open-form" onclick="openForm()"> + </button>
+        <button id ="remove-form" onclick="showRemove()"> - </button>
+        <button id = "remove-done" onclick="closeRemove()" style = "display: none"> Done</button>
         <form id = "add-member" style = "display: none">
             <h1> Add Members </h1>
             <label id = "Name-form"> Name: </label> <br>
@@ -193,6 +145,97 @@
         <h1> Contact</h1> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
     </section>
     
-            
+    <script>
+        
+            var member_count = 6;
+            function myFunction() {
+              var x = document.getElementsByClassName("list");
+              for(ii = 0; ii < x.length; ii++) {
+                x[ii].classList.toggle("change");
+              }
+            }
+    
+            function addMember() {
+                member_count++;
+                var container = document.getElementsByClassName("flex-container");
+                //adding the new member
+                container[0].innerHTML += `<div class = "members-flex" id = "member${member_count}"> <button class = "minus-signs" id = "minus${member_count}" onclick="removeMember(${member_count})" style="display:none"> - </button> <div class = "member-image-container"> <img src = "member.png" alt="member photo" class = "member-photo"> </div> <div class = "member-text-container"> <strong class="member-name"> </strong> <p class = "member-post"> </p> <hr> <p class = "member-info"> </p> </div> </div>`
+                
+                var members =  document.getElementsByClassName("members-flex");
+                var empty_flex = members[members.length - 1];
+    
+                // var image_member = empty_flex.getElementsByTagName("img"); 
+                var name_member = empty_flex.getElementsByTagName("strong");
+                var post_member = empty_flex.getElementsByClassName("member-post");
+                var info_member = empty_flex.getElementsByClassName("member-info");
+    
+                // var image_entered = document.getElementById("image-entered")
+                var name_entered = document.getElementById("name-entered");
+                var post_entered = document.getElementById("post-entered");
+                var info_entered = document.getElementById("info-entered");
+                
+                // image_member[0].src = image_entered.value;
+                name_member[0].innerHTML = name_entered.value;
+                if(name_entered.value === "")
+                {
+                    name_member[0].innerHTML = name_entered.placeholder;
+                }
+                post_member[0].innerHTML = post_entered.value;
+                if(post_entered.value === "")
+                {
+                    post_member[0].innerHTML = post_entered.placeholder;
+                }
+                info_member[0].innerHTML = info_entered.value;
+                if(info_entered.value === "")
+                {
+                    info_member[0].innerHTML = info_entered.placeholder;
+                }
+            }
+    
+            function removeMember(temp) {
+                var to_remove = document.getElementById(`member${temp}`);
+                to_remove.style.display = "none";
+            }
+    
+            function showRemove() {
+                document.getElementById("open-form").style.display="none";
+                document.getElementById("remove-form").style.display = "none";
+                document.getElementById("remove-done").style.display = "";
+                var minus_signs = document.getElementsByClassName("minus-signs");
+                for( ii = 0; ii < minus_signs.length; ii++) {
+                    minus_signs[ii].style.display = "";
+                }
+            }
+
+            function closeRemove() {
+                document.getElementById("open-form").style.display="";
+                document.getElementById("remove-form").style.display = "";
+                document.getElementById("remove-done").style.display = "none";
+                var minus_signs = document.getElementsByClassName("minus-signs");
+                for( ii = 0; ii < minus_signs.length; ii++) {
+                    minus_signs[ii].style.display = "none";
+                }
+
+            }
+    
+            function openForm() {
+                document.getElementById("add-member").style.display="";
+                document.getElementById("open-form").style.display="none";
+                document.getElementById("remove-form").style.display = "none";
+                var name_entered = document.getElementById("name-entered");
+                var post_entered = document.getElementById("post-entered");
+                var info_entered = document.getElementById("info-entered");
+                
+                name_entered.value = "";
+                post_entered.value = "";
+                info_entered.value = "";
+            }
+    
+            function closeForm() {
+                document.getElementById("add-member").style.display="none";
+                document.getElementById("open-form").style.display="";
+                document.getElementById("remove-form").style.display = "";
+            }
+        </script>
 </body>
 </html>
