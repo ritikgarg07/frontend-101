@@ -23,10 +23,11 @@ function describeArc(x, y, radius, startAngle, endAngle) {
 
 
 
-var width_body = document.documentElement.clientWidth;
-var height_body = document.documentElement.clientHeight; 
 
 window.onload = function drawSVG() {
+    var width_body = document.documentElement.clientWidth;
+    var height_body = document.documentElement.clientHeight; 
+
     center_x = width_body/2;
     center_y = height_body/2;
     var bg_circle = document.getElementById("bg-circle");
