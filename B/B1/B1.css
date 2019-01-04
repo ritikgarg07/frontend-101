@@ -1,80 +1,91 @@
-svg {
-    height: 600px;
-    width: 1000px;
+body {
+  margin: 0px;
+  background-color: #333333;
+}
+#main {
+    height: 90vh;
+    width: 100%;
   }
+
+@media only screen and (min-width: 600px) {
+    #time-text {
+        font-size: 4em;
+        text-shadow: 0 0 10px #FF9500;
+    }
+
+    #am {
+        font-size: 1em;
+        text-shadow: 0 0 10px #FF2D55;
+    }
+
+    #day {
+        font-size: 3em;
+        text-shadow: 0 0 10px #007AFF;
+    }
+    #date {
+        font-size: 2em;
+        text-shadow: 0 0 15px #007AFF;
+    }
+}
 #time-text {
-    font-size: 4em;
-    text-align: center;
-    margin: auto;
-    text-shadow: 0 0 10px #FF9500;
-    vertical-align: middle;
+  font-size: 2em;
+  text-shadow: 0 0 10px #FF9500;
 }
 
 #am {
-    font-size: 1em;
-    text-align: center;
-    margin: auto;
-    text-shadow: 0 0 10px #FF2D55;
-    vertical-align: middle;   
+  font-size: 1em;
+  text-shadow: 0 0 10px #FF2D55;
 }
 
 #day {
-    font-size: 3em;
-    text-align: center;
-    margin: auto;
-    text-shadow: 0 0 10px #007AFF;
-    vertical-align: middle;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px #007AFF;
 }
 #date {
-    font-size: 2em;
-    text-align: center;
-    margin: auto;
-    text-shadow: 0 0 15px #007AFF;
-    vertical-align: middle;
+  font-size: 1.5em;
+  text-shadow: 0 0 15px #007AFF;
 }
 
-.marks {
-    transform: translate(250px, 300px);
+
+
+#marks {
     stroke: #49D964;
     stroke-width: 3px;
 }
-.marks > line:nth-child(1) {
+#marks > line:nth-child(1) {
     /* There are 12 marks, so we rotate by 30deg (12 * 30 = 360) */
     transform: rotate(30deg); 
   }
-  .marks > line:nth-child(2) {
+  #marks > line:nth-child(2) {
     transform: rotate(calc(2 * 30deg));
   }
-  .marks > line:nth-child(3) {
+  #marks > line:nth-child(3) {
     transform: rotate(calc(3 * 30deg));
   }
-  .marks > line:nth-child(4) {
+  #marks > line:nth-child(4) {
     transform: rotate(calc(4 * 30deg));
   }
-  .marks > line:nth-child(5) {
+  #marks > line:nth-child(5) {
     transform: rotate(calc(5 * 30deg));
   }
-  .marks > line:nth-child(6) {
+  #marks > line:nth-child(6) {
     transform: rotate(calc(6 * 30deg));
   }
-  .marks > line:nth-child(7) {
+  #marks > line:nth-child(7) {
     transform: rotate(calc(7 * 30deg));
   }
-  .marks > line:nth-child(8) {
+  #marks > line:nth-child(8) {
     transform: rotate(calc(8 * 30deg));
   }
-  .marks > line:nth-child(9) {
+  #marks > line:nth-child(9) {
     transform: rotate(calc(9 * 30deg));
   }
-  .marks > line:nth-child(10) {
+  #marks > line:nth-child(10) {
     transform: rotate(calc(10 * 30deg));
   }
-  .marks > line:nth-child(11) {
+  #marks > line:nth-child(11) {
     transform: rotate(calc(11 * 30deg));
   }
-  .marks > line:nth-child(12) {
+  #marks > line:nth-child(12) {
     transform: rotate(calc(12 * 30deg));
   }
-body {
-    background-color: #110C11;
-}
